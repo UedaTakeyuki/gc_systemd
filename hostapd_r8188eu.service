@@ -1,0 +1,10 @@
+[Unit]
+Description=hostapd_r8188eu
+After=rc-local.service
+[Service]
+ExecStart=/home/pi/install/hostapd_r8188eu /home/pi/install/hostapd.conf
+Restart=always
+Type=simple
+PIDFile=/var/run/hostapd_r8188eu.pid
+[Install]
+WantedBy=multi-user.target

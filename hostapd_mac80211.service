@@ -1,0 +1,10 @@
+[Unit]
+Description=hostapd_mac80211
+After=rc-local.service
+[Service]
+ExecStart=/home/pi/install/hostapd_mac80211 /home/pi/install/hostapd.conf
+Restart=always
+Type=simple
+PIDFile=/var/run/hostapd_mac80211.pid
+[Install]
+WantedBy=multi-user.target
